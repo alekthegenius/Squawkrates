@@ -2,5 +2,5 @@ flask
 pandas
 requests
 beautifulsoup4
-dotenv
+python-dotenv
 Gunicorn
