@@ -4,7 +4,7 @@ const currentlocation = window.location.hostname + ":" + window.location.port
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-var Dark_icn_site = `http://${currentlocation}/static/resources/iconDark.png`
+var Dark_icn_site = `https://${currentlocation}/static/resources/iconDark.png`
 Dark_icn_site = Dark_icn_site.replace('.com:','.com');
 
 
