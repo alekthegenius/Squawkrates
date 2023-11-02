@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="icon" type="image/png" href="/static/resources/favicon.png">
+        <script src="https://kit.fontawesome.com/03e18f9ab4.js" crossorigin="anonymous"></script>
+        <meta name="color-scheme" content="dark light">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
+        <link rel="stylesheet" href="/static/results-style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+        <title>Squawkrates</title>
+    </head>
+    <body>
+        
+        <div class="search">
+            <button class="btn-toggle">Toggle Dark-Mode</button>
+
+            <div class="search-content">
+                <picture class="animate__animated animate__lightSpeedInLeft">
+                    <a href="/"><img id="search_icon" src="/static/resources/iconLight.png" /></a>
+                </picture>
+                <form id="search-form" action="/" method="get">
+                    <textarea name="query" id="inputbox" rows="1">{{ placeholder }}</textarea>
+                    
+                    <button type="submit" value="Search" form="search-form" class="btn-search"><i class="fa fa-search" style="color: white;"></i></button>
+                </form>
+            </div>
+            
+        </div>
+
+
+        <div class = "results-wrapper">
+            {% for index, row in results.iterrows() %}
+            <div class="results">
+                <p class="site">{{ row['rank'] }}: {{ row['link'] }}</p>
+                <a href="{{ row['link'] }}">{{ row['title'] }}</a>
+                <p class="snippet">{{ row['snippet'] }}</p>
+            </div>
+        {% endfor %}
+        </div>
+        
+        
+        <script type="text/javascript" src="/static/scripts.js"></script>
+    </body>
+
+</html>

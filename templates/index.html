@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="icon" type="image/png" href="/static/resources/favicon.png">
+        <script src="https://kit.fontawesome.com/03e18f9ab4.js" crossorigin="anonymous"></script>
+        <meta name="color-scheme" content="dark light">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
+        <link rel="stylesheet" href="/static/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Squawkrates</title>
+    </head>
+    <body>
+
+        <button class="btn-toggle">Toggle Dark-Mode</button>
+        
+        <div class="search">
+
+            <picture class="animate__animated animate__lightSpeedInLeft">
+                <img id="search_icon" src="/static/resources/iconLight.png" />
+            </picture>
+            <form id="search-form" action="/" method="get">
+                <textarea name="query" id="inputbox" rows="1"></textarea>
+                
+                <button type="submit" value="Search" form="search-form" class="btn-search">Search</button>
+            </form>
+        </div>
+    
+        <footer>
+            <p class="footer-text">Made With <span class="fa-solid fa-heart"></span> By Alek Vasek © 2023</p>
+        </footer>
+        <script type="text/javascript" src="/static/scripts.js"></script>
+    </body>
+
+</html>
