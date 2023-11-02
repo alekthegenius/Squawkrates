@@ -1,11 +1,15 @@
 const btn = document.querySelector(".btn-toggle");
 const icn = document.getElementById("search_icon");
-const currentlocation = window.location.hostname + ":" + window.location.port
+
+if (window.location.port == '') {
+  var currentlocation = window.location.protocol + "//" + window.location.hostname;
+} else {
+  var currentlocation = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
+}
+
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-var Dark_icn_site = `https://${currentlocation}/static/resources/iconDark.png`
-Dark_icn_site = Dark_icn_site.replace('.com:','.com');
 
 
 const currentTheme = localStorage.getItem("theme");
@@ -18,7 +22,7 @@ if (currentTheme == "dark") {
 }
 
 function toggleIcon() {
-    if (icn.src == Dark_icn_site) {
+    if (icn.src == `${currentlocation}/static/resources/iconDark.png`) {
         icn.src =  "/static/resources/iconLight.png";
     } else {
         icn.src =  "/static/resources/iconDark.png";
