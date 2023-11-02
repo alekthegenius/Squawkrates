@@ -1,13 +1,8 @@
 from flask import Flask, request
 from flask import render_template
 from search import search
-from dotenv import load_dotenv
-import html
-import os
 
-load_dotenv()
-SEARCH_KEY = os.getenv('SEARCH_KEY')
-SEARCH_ID = os.getenv('SEARCH_ID')
+import HTML
 
 app = Flask(__name__)
 
