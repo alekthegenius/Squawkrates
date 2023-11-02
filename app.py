@@ -1,8 +1,7 @@
 from flask import Flask, request
 from flask import render_template
 from search import search
-
-import HTML
+import html
 
 app = Flask(__name__)
 
