@@ -75,7 +75,7 @@ picture {
 }
 
 .snippet {
-    color: #cccccc;
+    color: var(--text-color)
 }
 
 .results-wrapper {
