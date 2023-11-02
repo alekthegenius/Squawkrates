@@ -4,6 +4,8 @@ const currentlocation = window.location.hostname + ":" + window.location.port
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+var Dark_icn_site = `http://${currentlocation}/static/resources/iconDark.png`
+Dark_icn_site = Dark_icn_site.replace('.com:','.com');
 
 
 const currentTheme = localStorage.getItem("theme");
@@ -16,7 +18,7 @@ if (currentTheme == "dark") {
 }
 
 function toggleIcon() {
-    if (icn.src == `http://${currentlocation}/static/resources/iconDark.png`) {
+    if (icn.src == Dark_icn_site) {
         icn.src =  "/static/resources/iconLight.png";
     } else {
         icn.src =  "/static/resources/iconDark.png";
